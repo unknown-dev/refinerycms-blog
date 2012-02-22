@@ -7,6 +7,7 @@ class BlogComment < ActiveRecord::Base
                :message_field => :body
 
   belongs_to :post, :class_name => 'BlogPost', :foreign_key => 'blog_post_id'
+  belongs_to :user
 
   acts_as_indexed :fields => [:name, :email, :message]
 
@@ -64,7 +65,19 @@ class BlogComment < ActiveRecord::Base
       comment.state = comment.ham? ? 'approved' : 'rejected'
     end
   end
-
+  
+  
+  module Membership
+    class << self
+      def login_required?
+        RefinerySetting.find_or_set(:login_required, false, {
+          :scoping => 'blog',
+          :restricted => false
+        })
+      end
+    end
+  end
+  
   module Moderation
     class << self
       def enabled?

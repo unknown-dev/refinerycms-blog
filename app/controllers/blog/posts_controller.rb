@@ -27,6 +27,14 @@ module Blog
     end
 
     def comment
+      if (current_user)
+        params[:blog_comment][:name]=current_user.first_name
+        params[:blog_comment][:email]=current_user.username
+        params[:blog_comment][:user_id]=current_user.id
+      end
+      
+      
+      
       if (@blog_comment = @blog_post.comments.create(params[:blog_comment])).valid?
         if BlogComment::Moderation.enabled? or @blog_comment.ham?
           begin

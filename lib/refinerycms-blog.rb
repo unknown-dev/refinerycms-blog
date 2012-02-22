@@ -36,6 +36,15 @@ module Refinery
           }
         end
       end
+      
+      refinery.after_inclusion do
+
+        User.class_eval do
+          has_many :blog_comments          
+        end
+        
+      end
+      
     end if defined?(Rails::Engine)
   end
 end
