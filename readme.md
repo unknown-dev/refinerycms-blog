@@ -18,9 +18,10 @@ Your Rails 3 application should not be called "blog"
 
 Open up your ``Gemfile`` and add at the bottom this line:
 
-# If you want to try the new membership addon, add this line to your Gemfile. It is still work in progress, so don't expect too much!
+# If you want to try the new membership addon, add this line to your Gemfile. 
+It is still work in progress, so don't expect too much!
 
-gem "refinerycms-blog", :git => "git@github.com:unknown-dev/refinerycms-blog.git", :branch => "membership-addon"
+	gem "refinerycms-blog", :git => "git@github.com:unknown-dev/refinerycms-blog.git", :branch => "membership-addon"
 
 Now, run ``bundle install``
 
