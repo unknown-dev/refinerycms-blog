@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-blog}
   s.version           = %q{1.8.0}
   s.description       = %q{A really straightforward open source Ruby on Rails blog engine designed for integration with RefineryCMS.}
-  s.date              = %q{2012-01-19}
+  s.date              = %q{2012-02-19}
   s.summary           = %q{Ruby on Rails blogging engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com/blog}
@@ -125,6 +125,7 @@ Gem::Specification.new do |s|
     db/migrate/6_add_custom_url_field_to_blog_posts.rb
     db/migrate/7_add_custom_teaser_field_to_blog_posts.rb
     db/migrate/8_add_primary_key_to_categorizations.rb
+    db/migrate/9_add_user_id_to_blog_comment.rb
     db/seeds
     db/seeds/refinerycms_blog.rb
     features
