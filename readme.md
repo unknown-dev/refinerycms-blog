@@ -18,17 +18,9 @@ Your Rails 3 application should not be called "blog"
 
 Open up your ``Gemfile`` and add at the bottom this line:
 
-# You now have two options:
+# If you want to try the new membership addon, add this line to your Gemfile. It is still work in progress, so don't expect too much!
 
-## Take the blue pill and stay on 1.7.x
-
-    gem 'refinerycms-blog', '~> 1.7.0'
-
-## Take the red pill and head up to 1.8.x
-## Where the previous shared/_post.html.erb partial was moved directly into show.html.erb
-## *MEANING:* If you depend on that partial, you'll have to check the changes and merge your customizations back in!
-
-    gem 'refinerycms-blog', '~> 1.8.0'
+gem "refinerycms-blog", :git => "git@github.com:unknown-dev/refinerycms-blog.git", :branch => "membership-addon"
 
 Now, run ``bundle install``
 
