@@ -125,6 +125,11 @@ de:
         other: Andere Artikel
         filed_in: Gespeichert unter
         submit: Kommentar senden
+        name: Name
+        email: Email
+        tagged: Tagged
+        message: Nachricht
+        by: Verfasst von
       archive:
         blog_archive_for: 'Blog Archiv für %{date}'
         no_blog_articles_posted: 'Für %{date} wurden keine Artikel verfasst.'
