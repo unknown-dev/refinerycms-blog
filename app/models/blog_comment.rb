@@ -1,6 +1,6 @@
 class BlogComment < ActiveRecord::Base
 
-  attr_accessible :name, :email, :message
+  attr_accessible :name, :email, :message,:user_id
 
   filters_spam :author_field => :name,
                :email_field => :email,
