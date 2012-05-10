@@ -29,7 +29,7 @@ module Blog
     def comment
       if (current_user)
         params[:blog_comment][:name]=current_user.first_name
-        params[:blog_comment][:email]=current_user.username
+        params[:blog_comment][:email]=current_user.email
         params[:blog_comment][:user_id]=current_user.id
       end
       
