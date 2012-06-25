@@ -49,7 +49,7 @@ module BlogPostsHelper
     else
      truncate(post.body, {
        :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 250),
-       :preserve_html_tags => true
+       :preserve_html_tags => false
       }).html_safe
     end
   end
